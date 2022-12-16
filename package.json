@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/app.css -o ./css/output.css",
+    "watch": "npx tailwindcss -i ./src/app.css -o ./css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.2"
+  }
+}

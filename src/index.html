@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Document</title>
+</head>
+
+<body class="h-full">
+    <section class="relative p-6">
+        <h1 class="font-bold text-4xl">Data Table</h1>
+        <button id="addBtn"
+            class="font-bold btn bg-blue-300 text-white border-blue-300 block ml-auto mb-3 shadow-lg">Add
+            item</button>
+        <div
+            class="fixed hidden shadow-xl bg-white border-2 border-gray-400 top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 p-8 md:visible popup-form w-3/5 h-3/5">
+            <h2 class="font-bold text-3xl">Post your content</h2>
+            <form action="" class="form-container pt-7">
+                <label class="block text-xl" for="title"><b>Title</b></label>
+                <input id="titleInput" class="w-full py-2 border-2 border-stone-300" type="text"
+                    placeholder="Enter Title" name="title" required>
+
+                <label class="block text-xl" for="image"><b>Image link</b></label>
+                <input id="imageInput" class="w-full py-2 border-2 border-stone-300" type="text"
+                    placeholder="Enter Image Link" name="image" required>
+                <label class="block text-xl" for="content"><b>Content</b></label>
+                <textarea id="contentInput" class="w-full py-2 h-44 border-2 border-stone-300" type="text"
+                    placeholder="Enter Your Content" name="content" required></textarea>
+
+                <button id="submitForm" type="submit" class="btn bg-lime-400 ">Submit</button>
+                <button id="cancel" type="button"
+                    class="btn btn-cancel float-right bg-red-600 text-white">Close</button>
+            </form>
+        </div>
+        <div class="overflow-auto rounded-lg shadow">
+            <table class="table w-full max-h-">
+                <thead class="bg-gray-300 border-2 border-gray-200">
+                    <tr>
+                        <th>ID</th>
+                        <th>Created At</th>
+                        <th class="w-24 overflow-hidden">Title</th>
+                        <th>Image</th>
+                        <th>Content</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <div class="pagenumbers space-x-4 flex justify-center items-center mx-auto" id="pagination">
+        <ul class="cursor-pointer flex items-center justify-center">
+            <li class="btn-prev opacity-50 uil uil-angle-left-b"></li>
+            <div class="page-number flex" id="page-number"></div>
+            <li class="btn-next uil uil-angle-right-b"></li>
+        </ul>
+        <label for="number-of-page">Number of pages</label>
+        <select name="number-of-page" class="border-solid rounded-lg border border-stone-700" id="page-select">
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
